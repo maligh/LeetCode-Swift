@@ -6,6 +6,9 @@
 
 class ValidParentheses {
     func isValid(_ s: String) -> Bool {
+        guard s.count % 2 == 0 else {
+            return false
+        }
         var stack = [Character]()
         
         for char in s {
